@@ -22,7 +22,7 @@ trait ApprovableTrait {
      * Check if this model needs an approval.
      * @return mixed
      */
-    public function needsApproval()
+    public function needsApproval() : bool
     {
         return $this->approvals()->where('outcome', 'pending')->exists();
     }
