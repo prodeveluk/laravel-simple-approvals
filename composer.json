@@ -16,9 +16,9 @@
     "require": {
         "php": "^7.3|^8.0",
         "brexis/laravel-workflow": "dev-master",
-        "illuminate/support": ">=6",
-        "illuminate/database": ">=6",
-        "illuminate/collections" : ">=6"
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/database": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/collections" : "^6.0 || ^7.0 || ^8.0"
     },
     "require-dev": {
         "mockery/mockery": "^1.4.2",
