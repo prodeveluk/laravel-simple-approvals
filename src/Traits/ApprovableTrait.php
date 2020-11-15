@@ -22,7 +22,7 @@ trait ApprovableTrait {
      * Check if this model needs an approval.
      * @return mixed
      */
-    public function needsApproval() : bool
+    public function needsApproval()
     {
         return $this->approvals()->where('outcome', 'pending')->exists();
     }
@@ -31,7 +31,7 @@ trait ApprovableTrait {
      * Get the current approval
      * @return null|Approval
      */
-    public function currentApproval() : bool
+    public function currentApproval()
     {
         return $this->approvals()->where('outcome', 'pending')
         ->orderBy('created_at')
@@ -40,9 +40,9 @@ trait ApprovableTrait {
 
     /**
      * Determine if workflows can be skipped for this model. Used internally for blocking workflow.
-     * @return false
+     * @return bool
      */
-    public function canSkip() : bool
+    public function canSkip()
     {
         return false;
     }
