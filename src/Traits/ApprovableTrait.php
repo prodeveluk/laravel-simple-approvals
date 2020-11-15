@@ -2,17 +2,20 @@
 
 namespace Prodevel\Laravel\Workflow\Traits;
 
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
+use Prodevel\Laravel\Workflow\Contracts\CanApprove;
 use Prodevel\Laravel\Workflow\Models\Approval;
 
 /**
- * Trait ApprovableTrait
+ * Trait ApproverTrait
  * @package Prodevel\Laravel\Workflow\Traits
  */
 trait ApprovableTrait {
 
     public function approvals()
     {
-        return $this->hasMany(Approval::class);
+        return $this->morphMany(Approval::class, 'approvable');
     }
 
     /**
@@ -46,10 +49,32 @@ trait ApprovableTrait {
 
     /**
      * Raise a new approval for this model.
-     * @param mixed $approver The model that needs to approve.
-     * @return Approval
+     * @param CanApprove|Collection $approver The model that needs to approve.
+     * @return Approval|Collection
      */
     public function raiseApproval($approver)
+    {
+        if($approver instanceof Model) {
+            return $this->raiseApprovalForApprover($approver);
+        }
+
+        if($approver instanceof Collection) {
+            $approvals = $approver->map(function ($approvingUser) {
+                return $this->raiseApprovalForApprover($approvingUser);
+            });
+
+            return $approvals;
+        }
+        
+    }
+
+    /**
+     * Internal function to create approval instance.
+     *
+     * @param CanApprove $approver
+     * @return void
+     */
+    private function raiseApprovalForApprover($approver)
     {
         $approval = new Approval(['outcome' => Approval::OUTCOME_PENDING]);
         $approval->approvable()->associate($this);

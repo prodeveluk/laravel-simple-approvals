@@ -99,6 +99,7 @@
     <property name="js.ns.project" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -115,7 +116,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605395935858</updated>
-      <workItem from="1605395936952" duration="3492000" />
+      <workItem from="1605395936952" duration="3669000" />
     </task>
     <servers />
   </component>
@@ -127,5 +128,9 @@
       <screen x="0" y="23" width="2560" height="1057" />
     </state>
     <state x="575" y="367" key="#Composer/-1680.23.1680.1027/0.23.2560.1057@0.23.2560.1057" timestamp="1605395999919" />
+    <state x="314" y="175" key="SettingsEditor" timestamp="1605402697478">
+      <screen x="0" y="23" width="2560" height="1057" />
+    </state>
+    <state x="314" y="175" key="SettingsEditor/-1680.23.1680.1027/0.23.2560.1057@0.23.2560.1057" timestamp="1605402697478" />
   </component>
 </project>

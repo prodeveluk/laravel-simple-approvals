@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e0d5c9a5cbf2702b676ee06a0e31522",
+    "content-hash": "e994ddfad47ec93e542ea367126c0fc8",
     "packages": [
         {
             "name": "brexis/laravel-workflow",
