@@ -1,6 +1,6 @@
 {
     "name": "prodevel/laravel-simple-approvals",
-    "type": "project",
+    "type": "library",
     "description": "Approval workflows for a laravel application.",
     "keywords": [
         "packages",
