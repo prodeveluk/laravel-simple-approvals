@@ -32,7 +32,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Proodvel\\Laravel\\Workflow\\Providers\\ApprovalServiceProvider"
+                "Prodevel\\Laravel\\Workflow\\Providers\\ApprovalServiceProvider"
             ]
         }
     },
