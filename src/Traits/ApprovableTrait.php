@@ -44,7 +44,7 @@ trait ApprovableTrait {
      */
     public function canSkip()
     {
-        return false;
+        return config('approvals.can_skip');
     }
 
     /**

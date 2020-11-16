@@ -14,7 +14,7 @@ class ApprovalServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/approvals.php', 'simple-approvals'
+            __DIR__.'/../../config/approvals.php', 'simple-approvals'
         );
     }
 
@@ -26,9 +26,9 @@ class ApprovalServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/approvals.php' => config_path('simple-approvals.php'),
+            __DIR__.'/../../config/approvals.php' => config_path('simple-approvals.php'),
         ]);
-        $this->loadRoutesFrom(__DIR__.'/routes.php');
-        $this->loadMigrationsFrom(__DIR__.'../database/migrations');
+        $this->loadRoutesFrom(__DIR__.'../../routes/api.php');
+        $this->loadMigrationsFrom(__DIR__.'../../database/migrations');
     }
 }
