@@ -31,7 +31,9 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "providers": [
+                "Proodvel\\Laravel\\Workflow\\Providers\\ApprovalServiceProvider"
+            ]
         }
     },
     "autoload": {
