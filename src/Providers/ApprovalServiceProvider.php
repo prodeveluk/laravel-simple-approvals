@@ -28,7 +28,7 @@ class ApprovalServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../../config/approvals.php' => config_path('simple-approvals.php'),
         ]);
-        $this->loadRoutesFrom(__DIR__.'../../routes/api.php');
-        $this->loadMigrationsFrom(__DIR__.'../../database/migrations');
+        $this->loadRoutesFrom(__DIR__.'/../../routes/api.php');
+        $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
     }
 }
