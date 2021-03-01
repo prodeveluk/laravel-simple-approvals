@@ -5,7 +5,7 @@ namespace Prodevel\Laravel\Workflow\Listeners;
 use Illuminate\Contracts\Events\Dispatcher;
 use Prodevel\Laravel\Workflow\Contracts\Approvable;
 use Prodevel\Laravel\Workflow\Models\Approval;
-use Symfony\Component\Workflow\Event\Event;
+use ZeroDaHero\LaravelWorkflow\Events\EnteredEvent;
 use ZeroDaHero\LaravelWorkflow\Events\EnterEvent;
 use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
 use ZeroDaHero\LaravelWorkflow\Events\LeaveEvent;
@@ -63,7 +63,7 @@ class ApprovalWorkflowSubscriber
         $subject = $event->getSubject();
     }
 
-    public function onEntered(Event $event)
+    public function onEntered(EnteredEvent $event)
     {
     }
 
