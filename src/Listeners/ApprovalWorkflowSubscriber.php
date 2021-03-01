@@ -6,7 +6,10 @@ use Illuminate\Contracts\Events\Dispatcher;
 use Prodevel\Laravel\Workflow\Contracts\Approvable;
 use Prodevel\Laravel\Workflow\Models\Approval;
 use Symfony\Component\Workflow\Event\Event;
-use Symfony\Component\Workflow\Event\GuardEvent;
+use ZeroDaHero\LaravelWorkflow\Events\EnterEvent;
+use ZeroDaHero\LaravelWorkflow\Events\GuardEvent;
+use ZeroDaHero\LaravelWorkflow\Events\LeaveEvent;
+use ZeroDaHero\LaravelWorkflow\Events\TransitionEvent;
 
 class ApprovalWorkflowSubscriber
 {
@@ -35,27 +38,27 @@ class ApprovalWorkflowSubscriber
 
     /**
      * Handle workflow leave event.
-     * @param Event $event
+     * @param LeaveEvent $event
      */
-    public function onLeave(Event $event)
+    public function onLeave(LeaveEvent $event)
     {
     }
 
     /**
      * Handle workflow transition event.
      *
-     * @param Event $event TransitionEvent
+     * @param TransitionEvent $event TransitionEvent
      */
-    public function onTransition(Event $event)
+    public function onTransition(TransitionEvent $event)
     {
     }
 
     /**
      * Handle workflow enter event.
      *
-     * @param Event $event
+     * @param EnterEvent $event
      */
-    public function onEnter(Event $event)
+    public function onEnter(EnterEvent $event)
     {
         $subject = $event->getSubject();
     }

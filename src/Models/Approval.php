@@ -2,7 +2,7 @@
 
 namespace Prodevel\Laravel\Workflow\Models;
 
-use Brexis\LaravelWorkflow\Traits\WorkflowTrait;
+use ZeroDaHero\LaravelWorkflow\Traits\WorkflowTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
