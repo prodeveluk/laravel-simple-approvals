@@ -15,9 +15,9 @@
     ],
     "require": {
         "php": "^7.3|^8.0",
-        "illuminate/database": "^7.0|^8.0",
-        "illuminate/support": "^7.0|^8.0",
-        "illuminate/collections": "^7.0|^8.0",
+        "illuminate/database": "^7.0||^8.0",
+        "illuminate/support": "^7.0||^8.0",
+        "illuminate/collections": "^7.0||^8.0",
         "zerodahero/laravel-workflow": "^3.2"
     },
     "require-dev": {
@@ -40,7 +40,6 @@
     "autoload": {
         "psr-4": {
             "Prodevel\\Laravel\\Workflow\\": "src/",
-            "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
     },
