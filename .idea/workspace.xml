@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="105d4099-5c51-4532-8cca-8cc10769f5e6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-approval-workflow.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-approval-workflow.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Traits/ApprovableTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Traits/ApprovableTrait.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +94,7 @@
       <path value="$PROJECT_DIR$/vendor/illuminate/macroable" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/zerodahero/laravel-workflow" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/config" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kIlM766XgDmM2kYINyTGyuocEG" />
@@ -123,7 +128,9 @@
       <option name="presentableId" value="Default" />
       <updated>1605395935858</updated>
       <workItem from="1605395936952" duration="3669000" />
-      <workItem from="1614614643531" duration="1510000" />
+      <workItem from="1614614643531" duration="1576000" />
+      <workItem from="1615575855411" duration="3000" />
+      <workItem from="1615635272301" duration="790000" />
     </task>
     <servers />
   </component>

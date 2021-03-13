@@ -6,8 +6,8 @@ return [
     'prodevel-simple-approval'     => [
         'type'          => 'state_machine',
         'marking_store' => [
-            'type'      => 'single_state',
-            'arguments' => ['outcome']
+            'type'     => 'single_state', // or 'single_state', can be omitted to default to workflow type's default
+            'property' => 'outcome', // this is the property on the model, defaults to 'marking'
         ],
         'supports'      => [Approval::class],
         'places'        => [

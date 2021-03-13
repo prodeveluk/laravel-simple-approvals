@@ -44,7 +44,7 @@ trait ApprovableTrait {
      */
     public function canSkip()
     {
-        return config('approvals.can_skip');
+        return config('approvals.can_skip', false);
     }
 
     /**
@@ -65,14 +65,14 @@ trait ApprovableTrait {
 
             return $approvals;
         }
-        
+
     }
 
     /**
      * Internal function to create approval instance.
      *
      * @param CanApprove $approver
-     * @return void
+     * @return Approval
      */
     private function raiseApprovalForApprover($approver)
     {

@@ -2,6 +2,7 @@
 
 namespace Prodevel\Laravel\Workflow\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use ZeroDaHero\LaravelWorkflow\Traits\WorkflowTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -80,5 +81,35 @@ class Approval extends Model
         }
         $this->workflow_apply(self::ACTION_REJECT);
         $this->save();
+    }
+
+    /**
+     * Get pending approovals
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopePending(Builder $builder)
+    {
+        return $builder->where('outcome', self::OUTCOME_PENDING);
+    }
+
+    /**
+     * Get rejected approvals
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopeRejected(Builder $builder)
+    {
+        return $builder->where('outcome', self::OUTCOME_REJECTED);
+    }
+
+    /**
+     * Get approved approvalss
+     * @param Builder $builder
+     * @return Builder
+     */
+    public function scopeApproved(Builder $builder)
+    {
+        return $builder->where('outcome', self::OUTCOME_APPROVED);
     }
 }
